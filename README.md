@@ -17,19 +17,44 @@ It's a real-time cognitive execution engine for people who think out loud.
 
 ---
 
-## 📸 Screenshots
+## 📸 Product Screenshots
 
-### 🎯 Thought Analysis — messy voice input → structured plan
-![Analysis](screenshots/Analysis.png)
+<div align="center">
 
-### 💾 Memory — every voice session stored and revisitable
-![Memory](screenshots/Memory.png)
+<table>
+<tr>
+<td width="50%" align="center">
 
-### ⚠️ Conflict Detection — catches contradictions in your thinking
-![Conflicts](screenshots/Conflicts.png)
+### 🎯 Thought Analysis  
+<img src="screenshots/Analysis.png" width="100%">
 
-### 📅 Patterns — longitudinal conflict tracking across sessions
-![Patterns](screenshots/Patterns.png)
+</td>
+<td width="50%" align="center">
+
+### 💾 Memory  
+<img src="screenshots/Memory.png" width="100%">
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" align="center">
+
+### ⚠️ Conflict Detection  
+<img src="screenshots/Conflicts.png" width="100%">
+
+</td>
+<td width="50%" align="center">
+
+### 📅 Patterns  
+<img src="screenshots/Patterns.png" width="100%">
+
+</td>
+</tr>
+
+</table>
+
+</div>
 
 ---
 
