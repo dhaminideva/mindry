@@ -1,180 +1,203 @@
-# ⚡ Mindry — Real-Time Thought Structuring Agent
+# ⚡ Mindry — Think Out Loud
 
-> Turn messy spoken thoughts → structured goals → executable roadmaps.
-> **100% free. Runs fully local. No API keys. No database.**
+> **Your brain dumps. Mindry structures them.**
+> Voice-first AI that turns messy spoken thoughts into goals, plans, and self-awareness — running 100% on your machine, for free.
 
 ---
 
-## 🪟 Windows Setup (Step by Step)
+## 🧠 What Is This?
 
-### Step 1 — Install Python
-Download from https://python.org/downloads (3.11 or 3.12)
-> ✅ During install, check **"Add Python to PATH"**
+Most of us don't think in bullet points. We think in circles — rambling, contradicting ourselves, looping back, second-guessing. Mindry accepts that chaos and turns it into something you can actually act on.
 
-### Step 2 — Install Ollama (the free local AI)
-Download from https://ollama.com/download/windows
-Run the installer. After install, open a new terminal and run:
-```
-ollama pull llama3.2
-```
-This downloads the free AI model (~2GB). Only needed once.
+Speak freely. Mindry listens, extracts what you *actually* mean, catches where you're contradicting yourself, builds you a plan, and remembers everything — so over time it can show you the patterns in your own thinking that you can't see yourself.
 
-### Step 3 — Unzip and set up Mindry
-Open **Command Prompt** or **PowerShell** in the mindry folder:
+**It is not a journaling app. It is not a chatbot. It is not therapy.**
+
+It's a real-time cognitive execution engine for people who think out loud.
+
+---
+
+## 📸 Screenshots
+
+### 🎯 Thought Analysis — messy voice input → structured plan
+![Analysis](screenshots/analysis.png)
+
+### 💾 Memory — every voice session stored and revisitable
+![Memory](screenshots/memory.png)
+
+### ⚠️ Conflict Detection — catches contradictions in your thinking
+![Conflicts](screenshots/conflicts.png)
+
+### 📅 Patterns — longitudinal conflict tracking across sessions
+![Patterns](screenshots/patterns.png)
+
+---
+
+## ✨ Features
+
+| Feature | What it does |
+|---|---|
+| 🎤 **Voice Input** | Speak naturally — messy, rambling, unfinished thoughts welcome |
+| 🧠 **Thought Structuring** | Extracts your real goal, constraints, emotional state |
+| ⚠️ **Conflict Detection** | Finds contradictions *within* a single thought |
+| 🗺️ **Roadmap Generation** | 3–5 concrete, specific action steps |
+| 💾 **Session Memory** | Every thought saved and revisitable |
+| 📅 **Pattern Tracking** | Spots conflicts that keep recurring across weeks |
+| 🔊 **Voice Responses** | Reads your structured plan back to you |
+| 🔒 **100% Local** | Your data never leaves your machine |
+| 💸 **Zero Cost** | Runs on Ollama — no API keys, no subscriptions |
+
+---
+
+## 🏗 How It Works
+
 ```
+Your voice
+    ↓
+Web Speech API (browser STT)
+    ↓
+Agent Runtime
+    ├── State Machine       IDLE → EXTRACTING → STRUCTURING → VERIFYING → COMPLETED
+    ├── Thought Structurer  raw speech → goal / constraints / emotional state / confidence
+    ├── Conflict Detector   finds contradictions in your own thinking
+    ├── Roadmap Generator   structured intent → 3-5 action steps
+    └── Memory Store        persists everything to mindry_memory.json
+    ↓
+Structured output + voice response
+    ↓
+Patterns tab: longitudinal conflict tracking across all sessions
+```
+
+The LLM (llama3 via Ollama) only handles meaning — all control flow, state transitions, verification, and guardrails are deterministic code. This means it's reliable, fast to debug, and doesn't hallucinate its way through your life decisions.
+
+---
+
+## 🚀 Setup (Windows)
+
+### Prerequisites
+- Python 3.11+ → [python.org](https://python.org/downloads) *(check "Add to PATH")*
+- Ollama → [ollama.com/download](https://ollama.com/download/windows)
+
+### Install
+
+```bash
+# 1. Pull the AI model (one time, ~4GB)
+ollama pull llama3
+
+# 2. Set up Mindry
 cd mindry
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-### Step 4 — Configure
-```
 copy .env.example .env
-```
-That's it — no API keys needed! The `.env` file works as-is.
 
-### Step 5 — Start Ollama (keep this running)
-Open a **separate** terminal window and run:
-```
-ollama serve
-```
-Leave this window open. Ollama must stay running in the background.
-
-### Step 6 — Start Mindry
-Back in your first terminal (with venv active):
-```
+# 3. Run
 uvicorn main:app --reload --port 8000
 ```
 
-### Step 7 — Open the app
-Go to: **http://localhost:8000**
+Open **http://localhost:8000** — done.
+
+> Ollama runs automatically in the background after install. No need to start it manually.
 
 ---
 
-## ✅ Every time you want to use Mindry
+## 🎮 Usage
 
-1. Open terminal A → run `ollama serve`
-2. Open terminal B → `cd mindry` → `venv\Scripts\activate` → `uvicorn main:app --reload --port 8000`
-3. Open http://localhost:8000
+1. Click **🎤** and speak your thought — raw, messy, unfiltered
+2. Click **⏹** to stop — Mindry auto-submits
+3. See your **goal extracted**, **conflicts flagged**, **roadmap built**
+4. Check **Memory** tab to revisit any past session
+5. Check **Patterns** tab after a few sessions to see recurring themes in your thinking
 
----
-
-## 📡 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET`  | `/`           | Web UI |
-| `POST` | `/think`      | Submit a thought (REST) |
-| `POST` | `/interrupt`  | Trigger interrupt |
-| `GET`  | `/state`      | Current agent state |
-| `GET`  | `/metrics`    | Latency + performance data |
-| `GET`  | `/memory`     | All saved thoughts (this session) |
-| `DELETE` | `/memory/{id}` | Delete a thought |
-| `WS`   | `/ws`         | WebSocket real-time interface |
-
-### REST Example (PowerShell)
-```powershell
-Invoke-RestMethod -Uri http://localhost:8000/think `
-  -Method POST `
-  -ContentType "application/json" `
-  -Body '{"transcript": "I want to change careers but I have a mortgage and no idea what to do"}'
-```
-
----
-
-## 🔧 Customization
-
-### Change AI model
-In `.env`, change `LLM_MODEL` to any model you've pulled:
-```
-LLM_MODEL=mistral       # Very fast, good quality
-LLM_MODEL=phi3          # Tiny, runs on weak hardware
-LLM_MODEL=llama3.2      # Default — best balance
-LLM_MODEL=gemma2        # Google's model, great reasoning
-```
-Pull any model with: `ollama pull mistral`
-
-### Change confidence threshold
-In `.env`:
-```
-CONFIDENCE_THRESHOLD=0.5   # Lower = save more thoughts
-CONFIDENCE_THRESHOLD=0.8   # Higher = only save very clear thoughts
-```
-
-### Add guardrail patterns
-In `guardrails/policy.py`, add to `BLOCKED_PATTERNS`:
-```python
-("your trigger phrase", "Message shown to user"),
-```
-
-### Memory note
-Thoughts are stored **in memory only** — they reset when you restart the server.
-If you want persistence later, the README has SQLite upgrade instructions.
-
----
-
-## 🏗 Architecture
-
-```
-Text Input (UI or API)
-       ↓
-FastAPI Server  (api/server.py)
-       ↓
-MindryOrchestrator  (core/orchestrator.py)
-   ├── StateMachine      — 8 deterministic states
-   ├── GuardrailsPolicy  — safety checks BEFORE LLM
-   ├── ThoughtStructurer — text → structured JSON  ┐
-   ├── ConflictDetector  — detect contradictions   ├── all via Ollama (free, local)
-   ├── RoadmapGenerator  — JSON → action plan      ┘
-   └── MemoryStore       — in-memory dict (no DB)
-```
-
-### Agent States
-```
-IDLE → EXTRACTING → STRUCTURING → VERIFYING → COMPLETED
-                                      ↓
-                                  REFINING → EXTRACTING
-            Any state → INTERRUPTED → EXTRACTING
-```
+**Keyboard shortcut:** `Ctrl+Enter` to submit typed thoughts
 
 ---
 
 ## 📁 Project Structure
+
 ```
 mindry/
 ├── main.py                  # Entry point
-├── requirements.txt         # No openai or sqlite deps!
-├── .env.example             # Config — no keys needed
 ├── api/server.py            # FastAPI + WebSocket
 ├── core/
-│   ├── state_machine.py     # Deterministic states
-│   ├── orchestrator.py      # Plan→Act→Verify loop
-│   └── schemas.py           # Pydantic models
+│   ├── state_machine.py     # 8-state deterministic FSM
+│   ├── orchestrator.py      # Plan → Act → Verify → Recover loop
+│   └── schemas.py           # Pydantic data models
 ├── tools/
-│   ├── ollama_client.py     # Free local LLM client
-│   ├── structurer.py        # ThoughtStructurer
-│   ├── contradiction.py     # ConflictDetector
-│   └── roadmap.py           # RoadmapGenerator
-├── memory/store.py          # In-memory storage
-├── guardrails/policy.py     # Safety rules
-├── static/index.html        # Web UI
-└── tests/test_core.py       # Unit tests
+│   ├── ollama_client.py     # Local LLM client (auto-detects model)
+│   ├── structurer.py        # Raw speech → structured JSON
+│   ├── contradiction.py     # Conflict detection
+│   └── roadmap.py           # Action plan generation
+├── memory/
+│   └── store.py             # File-backed persistent storage
+├── guardrails/
+│   └── policy.py            # Input safety rules
+└── static/
+    └── index.html           # Full UI (single file)
 ```
 
 ---
 
-## 🧪 Run Tests
+## 🔧 Configuration
+
+All config lives in `.env`:
+
+```env
+LLM_MODEL=llama3            # any ollama model you have pulled
+CONFIDENCE_THRESHOLD=0.5    # minimum confidence to save a thought
+OLLAMA_BASE_URL=http://localhost:11434
 ```
-venv\Scripts\activate
-pytest tests/ -v
+
+**Swap models anytime:**
+```bash
+ollama pull mistral    # faster
+ollama pull llama3.1   # more capable
 ```
+Then update `LLM_MODEL` in `.env`.
 
 ---
 
-## 💡 Tips
-- **Ctrl+Enter** in the text area submits your thought
-- **⚡ button** triggers an interrupt mid-processing
-- **Memory tab** shows thoughts saved this session
-- **Metrics tab** shows latency and request stats
-- Ollama first response may be slow (~5–10s) — subsequent ones are faster
+## 🧱 Tech Stack
+
+| Layer | Tech |
+|---|---|
+| Backend | FastAPI + Uvicorn + asyncio |
+| LLM | Ollama (llama3) — local, free |
+| Voice In | Web Speech API (Chrome/Edge) |
+| Voice Out | Web Speech Synthesis API |
+| Storage | JSON file (mindry_memory.json) |
+| Realtime | WebSocket |
+| Validation | Pydantic v2 |
+
+---
+
+## 🗺 Roadmap
+
+- [ ] Faster-Whisper for better voice recognition on long rambling thoughts
+- [ ] Weekly pattern digest — "this week your main conflict was X"
+- [ ] Cross-session goal evolution tracking — "3 weeks ago you said X, now you say Y"
+- [ ] Export to markdown / PDF
+- [ ] Mobile PWA support
+
+---
+
+## 🤔 Why Not Just Use ChatGPT?
+
+You could. But:
+
+- ChatGPT doesn't run locally — your most personal thoughts go to a server
+- ChatGPT has no memory across sessions unless you pay
+- ChatGPT doesn't track your conflict patterns over time
+- ChatGPT is a chatbot — Mindry is a structured execution runtime with deterministic state management
+
+---
+
+## 📄 License
+
+MIT — do whatever you want with it.
+
+---
+
+<div align="center">
+  <strong>Built for people who think better out loud than on paper.</strong>
+</div>
