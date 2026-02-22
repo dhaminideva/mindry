@@ -1,0 +1,122 @@
+{
+  "d4aaec6e-e0c0-4811-9726-a70929a72dbe": {
+    "idea_id": "d4aaec6e-e0c0-4811-9726-a70929a72dbe",
+    "primary_goal": "move out of parents' house",
+    "constraints": [
+      "need to consider the impact on social life"
+    ],
+    "emotional_state": "neutral",
+    "conflicts_detected": [
+      "fear of loneliness vs desire for independence"
+    ],
+    "clarifying_questions_needed": [],
+    "confidence_score": 0.85,
+    "raw_transcript": "It's high time that I'm walking from parents house. I've been meaning to do that for quite some time but uh have just been procrastinating for too many years I should say uh. But I'm also worried like I hardly have any friends outside of home so I might get really lonely umm. So I'm just contemplating what I should do at this point. Like should I just take a house that's closer to my parents' house just to. Keep a Peace of Mind. Or or should I just like move pretty farther away so I can take some really good time off and explore myself and just see how life is being independent?",
+    "date_created": "2026-02-22T03:14:10.066292",
+    "refined_count": 0,
+    "recordings": [
+      {
+        "transcript": "It's high time that I'm walking from parents house. I've been meaning to do that for quite some time but uh have just been procrastinating for too many years I should say uh. But I'm also worried like I hardly have any friends outside of home so I might get really lonely umm. So I'm just contemplating what I should do at this point. Like should I just take a house that's closer to my parents' house just to. Keep a Peace of Mind. Or or should I just like move pretty farther away so I can take some really good time off and explore myself and just see how life is being independent?",
+        "timestamp": "2026-02-22T03:14:10.066292",
+        "confidence": 0.85
+      }
+    ]
+  },
+  "475dfbdc-09ff-46ca-b6c2-2b32d3fe4c2b": {
+    "idea_id": "475dfbdc-09ff-46ca-b6c2-2b32d3fe4c2b",
+    "primary_goal": "turn business idea into reality",
+    "constraints": [
+      "limited budget",
+      "need to be scalable"
+    ],
+    "emotional_state": "excited",
+    "conflicts_detected": [
+      "Requires scalability but has limited budget"
+    ],
+    "clarifying_questions_needed": [],
+    "confidence_score": 0.9,
+    "raw_transcript": "I I have a business idea and.",
+    "date_created": "2026-02-22T03:24:23.312441",
+    "refined_count": 0,
+    "recordings": [
+      {
+        "transcript": "I I have a business idea and.",
+        "timestamp": "2026-02-22T03:24:37.228133",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "f100784f-8df8-4f29-b11e-9748e6565ad1": {
+    "idea_id": "f100784f-8df8-4f29-b11e-9748e6565ad1",
+    "primary_goal": "start a business idea",
+    "constraints": [
+      "procrastination",
+      "introverted person"
+    ],
+    "emotional_state": "anxious|frustrated",
+    "conflicts_detected": [
+      "partially blaming others (lack of network) for lack of progress"
+    ],
+    "clarifying_questions_needed": [
+      "how to find a like-minded group"
+    ],
+    "confidence_score": 0.55,
+    "raw_transcript": "I think having a business idea for quite some time, but, uh, I've just been procrastinating it more than procrastination. I think I need to start it at a point of time and I feel like maybe having a lack of a proper network has been, uh, partially the reason, Umm, I've tried to like, you know, grow my network, but I'm inherently a very. Umm, introverted person. So I find it very difficult to get on to a room and start talking to people about, umm, my pro, my ideas. So I think I need to find a, a, a nice group that's like minded and, uh, like let them know my interest and what my, uh, future plans are on the project and, uh, get started with it. So I don't know how to find this kind of. Network. I've just been struggling with it and I think nothing's happening at this point. Umm, I don't know. I kind of have to figure out how to. Like I have to plan on how to. Get this started.",
+    "date_created": "2026-02-22T03:29:18.368053",
+    "refined_count": 0,
+    "recordings": [
+      {
+        "transcript": "I think having a business idea for quite some time, but, uh, I've just been procrastinating it more than procrastination. I think I need to start it at a point of time and I feel like maybe having a lack of a proper network has been, uh, partially the reason, Umm, I've tried to like, you know, grow my network, but I'm inherently a very. Umm, introverted person. So I find it very difficult to get on to a room and start talking to people about, umm, my pro, my ideas. So I think I need to find a, a, a nice group that's like minded and, uh, like let them know my interest and what my, uh, future plans are on the project and, uh, get started with it. So I don't know how to find this kind of. Network. I've just been struggling with it and I think nothing's happening at this point. Umm, I don't know. I kind of have to figure out how to. Like I have to plan on how to. Get this started.",
+        "timestamp": "2026-02-22T03:29:18.372109",
+        "confidence": 0.55
+      }
+    ]
+  },
+  "05e1efd4-571d-4988-8897-b1995a08ce11": {
+    "idea_id": "05e1efd4-571d-4988-8897-b1995a08ce11",
+    "primary_goal": "stop procrastination and manage time effectively",
+    "constraints": [
+      "no more magical reset button mentality"
+    ],
+    "emotional_state": "frustrated",
+    "conflicts_detected": [
+      "feeling guilty, but consistently failing to change"
+    ],
+    "clarifying_questions_needed": [],
+    "confidence_score": 0.65,
+    "raw_transcript": "OK, wait, I just realized something today. I say I don't have time, but I definitely have a lot of time. I just don't use it well. And then I feel guilty about it, and then I avoid things even more. And then I tell myself tomorrow will be different. Why do I actually think that tomorrow is a magical reset button? I feel capable, but definitely a lot lot inconsistent. And that inconsistency bothers me more than the actual failure would. At some point I think this gotta change or it's gonna be self restrictive at this point, but I just don't know where to stop this procrastination and start getting things done in the right way and manage my time in the right way. Oh man.",
+    "date_created": "2026-02-22T03:43:37.706249",
+    "refined_count": 0,
+    "recordings": [
+      {
+        "transcript": "OK, wait, I just realized something today. I say I don't have time, but I definitely have a lot of time. I just don't use it well. And then I feel guilty about it, and then I avoid things even more. And then I tell myself tomorrow will be different. Why do I actually think that tomorrow is a magical reset button? I feel capable, but definitely a lot lot inconsistent. And that inconsistency bothers me more than the actual failure would. At some point I think this gotta change or it's gonna be self restrictive at this point, but I just don't know where to stop this procrastination and start getting things done in the right way and manage my time in the right way. Oh man.",
+        "timestamp": "2026-02-22T03:43:37.707784",
+        "confidence": 0.65
+      }
+    ]
+  },
+  "68c26ce2-4680-4fe9-a465-879cda5068bb": {
+    "idea_id": "68c26ce2-4680-4fe9-a465-879cda5068bb",
+    "primary_goal": "check in with mom, ask dad about insurance ring, check groceries list, reply to cousin, drink more water",
+    "constraints": [
+      "call mom before 8:00 PM",
+      "not too late"
+    ],
+    "emotional_state": "neutral",
+    "conflicts_detected": [
+      "procrastination on asking dad about insurance ring"
+    ],
+    "clarifying_questions_needed": [],
+    "confidence_score": 0.7,
+    "raw_transcript": "OK, just a quick reminder to myself before I forget. Tomorrow I need to call mom in the evening, not late like before 8:00 PM because if I call her too late she'll she'll say that she's about asleep. Also, I need to ask dad about this insurance ring. I just keep postponing it and I should probably send it to them before this weekend. Then I need to check the groceries list. If they're running low, I think we're out of eggs. And maybe milk, I should just make a proper list instead of going and forgetting half the stuff I need to get. And I need to text my cousin back. I saw his message and mentally replied but I didn't actually reply. What else? Yeah. Also drink more water tomorrow. I just keep saying that. And maybe try not to be so reactive with something small and wise. Me. Just breathe. It's not serious. OK then that's it for now.",
+    "date_created": "2026-02-22T03:50:38.607546",
+    "refined_count": 0,
+    "recordings": [
+      {
+        "transcript": "OK, just a quick reminder to myself before I forget. Tomorrow I need to call mom in the evening, not late like before 8:00 PM because if I call her too late she'll she'll say that she's about asleep. Also, I need to ask dad about this insurance ring. I just keep postponing it and I should probably send it to them before this weekend. Then I need to check the groceries list. If they're running low, I think we're out of eggs. And maybe milk, I should just make a proper list instead of going and forgetting half the stuff I need to get. And I need to text my cousin back. I saw his message and mentally replied but I didn't actually reply. What else? Yeah. Also drink more water tomorrow. I just keep saying that. And maybe try not to be so reactive with something small and wise. Me. Just breathe. It's not serious. OK then that's it for now.",
+        "timestamp": "2026-02-22T03:50:38.609167",
+        "confidence": 0.7
+      }
+    ]
+  }
+}
